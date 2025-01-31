@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('images/bg.avif');
+           /* Light blue background color */
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+        }
+        .login-form {
+            background-color: rgba(137, 161, 228, 0.8);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px; /* Fixed width for the form */
+        }
+        .login-form h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .login-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* Ensure padding is included in the width */
+        }
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .login-form button:hover {
+            background-color: #218838;
+        }
+        .login-form .forgot-password {
+            margin-top: 10px;
+            text-align: center;
+        }
+        .login-form .forgot-password a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .login-form .forgot-password a:hover {
+            text-decoration: underline;
+        }
+        .login-form .message {
+            margin-top: 20px;
+            display: none;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-form">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <div class="forgot-password">
+                <a href="#">Forgot Password?</a>
+            </div>
+            <div class="message" id="message"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Simple login validation (replace with actual validation logic)
+            if (username === 'user' && password === 'pass') {
+                document.getElementById('message').style.color = 'green';
+                document.getElementById('message').textContent = 'Login successful';
+                document.getElementById('message').style.display = 'block';
+                // Redirect to home.html after successful login
+                window.location.href = 'home.html';
+            } else {
+                document.getElementById('message').style.color = 'red';
+                document.getElementById('message').textContent = 'Invalid username or password';
+                document.getElementById('message').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #add8e6; /* Light blue background color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            background-image: url('c:/Users/harjo/Pictures/harjotabout.jpg');
+            background-color: #99bcf2; /* Light green background color */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(214, 217, 207, 0.1);
+            text-align: center;
+        }
+        h2 {
+            color: #7b2407;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #acf5ce; /* Light red background color */
+            transition: background-color 0.3s ease;
+        }
+        select:hover {
+            background-color: #e0e0e0; /* Light grey background color on hover */
+        }
+        option {
+            padding: 10px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745; /* Green background color */
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body id="home-page">
+    <div class="container">
+        <h2>Welcome to the Home Page</h2>
+        <label for="options">Choose an option:</label>
+        <select id="options">
+            <option value="harjot">Harjot</option>
+            <option value="komal">Komal</option>
+            <option value="harman">Harman</option>
+        </select>
+        <button type="submit" onclick="redirectToPage()">Submit</button>
+    </div>
+    <script>
+        function redirectToPage() {
+            const selectedOption = document.getElementById('options').value;
+            if (selectedOption === 'harjot') {
+                window.location.href = 'harjot.html';
+            }
+            // Add more conditions for other options if needed
+        }
+    </script>
+</body>
+</html>
