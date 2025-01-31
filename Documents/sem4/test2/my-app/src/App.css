@@ -1,0 +1,173 @@
+/* Global Styling for Body */
+body {
+  background-image: url(../../../../../Downloads/how-to-create-cool-website-backgrounds-the-ultimate-guide.gif);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: red; /* Red text color for body */
+  padding-top: 90px; /* Adjust top padding to avoid navbar overlap */
+  background-color: transparent; /* Transparent background for the body */
+}
+
+/* Main App Styling */
+.App {
+  text-align: center;
+  background-color: transparent; /* Transparent background for the App */
+  width: 100%;
+  position: relative;
+  color: red; /* Red text for the App */
+}
+
+/* Hero Section Styling */
+.hero-section {
+  position: relative;
+  height: 100vh; /* Full height */
+  background-color:transparent; /* Dark overlay with transparency */
+  background-size: cover;
+  background-position: center center;
+}
+
+/* Hero Text Styling */
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: red; /* Red color for hero text */
+  text-align: center;
+  padding: 0 20px;
+}
+
+h1, p {
+  color: red; /* Red color for headings and paragraphs */
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color : transparent; /* Semi-transparent background */
+  position: fixed ! important; /* Fixed navbar */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999; /* Ensure it stays on top */
+  padding: 10px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Light shadow for depth */
+}
+
+/* Navbar Branding */
+.navbar-brand {
+  font-size: 1.8rem; /* Larger brand size */
+  font-weight: bold;
+  color: red !important; /* Red color for the brand */
+}
+
+/* Navbar Link Styling */
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  color: red !important; /* Red color for navbar links */
+  padding: 12px 20px;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f0a500 !important; /* Hover color */
+  text-decoration: underline;
+}
+
+/* Navbar Toggle Icon */
+.navbar-toggler-icon {
+  background-color: transparent !important; /* White icon for toggle */
+}
+
+/* Footer Styling */
+footer {
+  background-color: rgba(0, 0, 0, 0.7); /* Transparent dark footer */
+  color: red; /* Red color for footer text */
+  padding: 30px 20px;
+  text-align: center;
+  margin-top: 50px; /* To avoid overlap with content */
+}
+
+/* Popup Overlay */
+.popup-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background-color: transparent;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Soft shadow */
+}
+
+/* Section Styling (General) */
+section {
+  background-color: transparent; /* All sections have transparent background */
+  padding: 60px 0; /* Generous padding */
+  color: red; /* Red color for section text */
+}
+
+/* Three-Column Section Styling */
+#three-columns .col-md-4 {
+  margin-bottom: 30px;
+}
+
+#three-columns h3 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: red; /* Red color for headings in sections */
+}
+
+#three-columns p {
+  font-size: 1.1rem;
+  color: red; /* Red color for paragraphs in sections */
+}
+
+/* Responsiveness for Navbar and Hero Section */
+@media (max-width: 768px) {
+  .navbar-nav .nav-link {
+    font-size: 1rem;
+  }
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+  .hero-text p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-nav .nav-link {
+    padding: 10px 15px;
+  }
+}
+
+/* Keyframes for logo spin (if needed in App.js) */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+}
